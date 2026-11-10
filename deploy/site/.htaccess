@@ -1,0 +1,28 @@
+# supabase-lite — route everything through index.php, serve real static files
+AddDefaultCharset UTF-8
+Options -Indexes
+
+<FilesMatch "\.(htaccess|sql|sqlite|md)$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# Protect the SQLite data directory
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^data/ - [F,L]
+  RewriteRule ^src/ - [F,L]
+
+  # Real files/dirs are served as-is (SPA assets)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Everything else goes to the API/SPA router
+  RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json
+</IfModule>

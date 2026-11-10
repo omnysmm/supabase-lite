@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="g1" cx="30%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0a0a1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="70%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0a0a1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g3" cx="50%" cy="20%" r="30%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0a0a1a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="blur2"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="line1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="line2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(99,102,241,0.06)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <!-- Grid -->
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <!-- Glow orbs -->
+  <ellipse cx="400" cy="300" rx="500" ry="400" fill="url(#g1)" filter="url(#blur2)"/>
+  <ellipse cx="1400" cy="600" rx="450" ry="350" fill="url(#g2)" filter="url(#blur2)"/>
+  <ellipse cx="960" cy="150" rx="400" ry="250" fill="url(#g3)" filter="url(#blur1)"/>
+  <!-- Circuit lines -->
+  <path d="M0 400 Q300 350 500 500 T1000 450 T1500 550 T1920 480" fill="none" stroke="url(#line1)" stroke-width="1.5"/>
+  <path d="M0 600 Q400 550 700 700 T1200 600 T1920 650" fill="none" stroke="url(#line2)" stroke-width="1"/>
+  <path d="M200 0 Q250 200 350 400 T500 800 T600 1080" fill="none" stroke="url(#line1)" stroke-width="0.8"/>
+  <path d="M1600 0 Q1550 300 1500 500 T1400 900 T1350 1080" fill="none" stroke="url(#line2)" stroke-width="0.8"/>
+  <!-- Nodes (connection points) -->
+  <g filter="url(#glow)">
+    <circle cx="500" cy="500" r="4" fill="#8b5cf6" opacity="0.8"/>
+    <circle cx="500" cy="500" r="12" fill="none" stroke="#8b5cf6" stroke-width="0.5" opacity="0.3"/>
+    <circle cx="1000" cy="450" r="3" fill="#06b6d4" opacity="0.7"/>
+    <circle cx="1000" cy="450" r="10" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.3"/>
+    <circle cx="1500" cy="550" r="4" fill="#6366f1" opacity="0.8"/>
+    <circle cx="1500" cy="550" r="14" fill="none" stroke="#6366f1" stroke-width="0.5" opacity="0.3"/>
+    <circle cx="350" cy="400" r="3" fill="#8b5cf6" opacity="0.6"/>
+    <circle cx="700" cy="700" r="3" fill="#06b6d4" opacity="0.6"/>
+    <circle cx="1200" cy="600" r="3" fill="#6366f1" opacity="0.6"/>
+    <circle cx="400" cy="200" r="2.5" fill="#a78bfa" opacity="0.5"/>
+    <circle cx="1300" cy="300" r="2.5" fill="#22d3ee" opacity="0.5"/>
+    <circle cx="800" cy="150" r="2" fill="#818cf8" opacity="0.5"/>
+    <circle cx="1600" cy="200" r="2" fill="#c4b5fd" opacity="0.4"/>
+    <circle cx="200" cy="700" r="2.5" fill="#6366f1" opacity="0.5"/>
+    <circle cx="1100" cy="800" r="2" fill="#8b5cf6" opacity="0.4"/>
+  </g>
+  <!-- Floating geometric shapes -->
+  <rect x="250" y="600" width="40" height="40" rx="8" fill="none" stroke="#6366f1" stroke-width="0.8" opacity="0.2" transform="rotate(15 270 620)"/>
+  <rect x="1400" y="200" width="30" height="30" rx="6" fill="none" stroke="#8b5cf6" stroke-width="0.8" opacity="0.2" transform="rotate(-20 1415 215)"/>
+  <polygon points="1650,700 1670,660 1690,700" fill="none" stroke="#06b6d4" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="150" cy="350" r="20" fill="none" stroke="#8b5cf6" stroke-width="0.6" opacity="0.15"/>
+  <circle cx="1750" cy="500" r="15" fill="none" stroke="#6366f1" stroke-width="0.6" opacity="0.15"/>
+  <!-- Hexagonal pattern elements -->
+  <g opacity="0.1" transform="translate(1100,250)">
+    <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="none" stroke="#8b5cf6" stroke-width="0.8"/>
+    <polygon points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25" fill="none" stroke="#6366f1" stroke-width="0.5"/>
+  </g>
+  <g opacity="0.08" transform="translate(700,800)">
+    <polygon points="0,-25 22,-12.5 22,12.5 0,25 -22,12.5 -22,-12.5" fill="none" stroke="#06b6d4" stroke-width="0.8"/>
+    <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#06b6d4" stroke-width="0.5"/>
+  </g>
+</svg>

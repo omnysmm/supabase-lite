@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="600" viewBox="0 0 1920 600">
+  <defs>
+    <radialGradient id="cg1" cx="30%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cg2" cx="70%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cblur"><feGaussianBlur stdDeviation="45"/></filter>
+    <filter id="cglow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="cgrid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
+    </pattern>
+    <linearGradient id="cwave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="600" fill="url(#cgrid)"/>
+  <ellipse cx="500" cy="250" rx="400" ry="300" fill="url(#cg1)" filter="url(#cblur)"/>
+  <ellipse cx="1400" cy="350" rx="350" ry="250" fill="url(#cg2)" filter="url(#cblur)"/>
+  <!-- Rising particles -->
+  <g filter="url(#cglow)">
+    <circle cx="200" cy="450" r="3" fill="#818cf8" opacity="0.6"/>
+    <circle cx="500" cy="350" r="2" fill="#a78bfa" opacity="0.5"/>
+    <circle cx="800" cy="400" r="3" fill="#c4b5fd" opacity="0.4"/>
+    <circle cx="1100" cy="300" r="2.5" fill="#22d3ee" opacity="0.5"/>
+    <circle cx="1400" cy="450" r="2" fill="#818cf8" opacity="0.4"/>
+    <circle cx="1700" cy="350" r="3" fill="#a78bfa" opacity="0.5"/>
+    <circle cx="350" cy="150" r="2" fill="#6366f1" opacity="0.3"/>
+    <circle cx="950" cy="100" r="2.5" fill="#8b5cf6" opacity="0.3"/>
+    <circle cx="1600" cy="150" r="2" fill="#06b6d4" opacity="0.3"/>
+  </g>
+  <!-- Abstract rocket trail -->
+  <path d="M960 550 Q940 400 960 250 Q980 100 960 0" fill="none" stroke="url(#cwave)" stroke-width="2" opacity="0.3"/>
+  <path d="M960 550 Q920 380 950 220 Q970 80 960 0" fill="none" stroke="url(#cwave)" stroke-width="1" opacity="0.15"/>
+  <!-- Geometric accents -->
+  <polygon points="960,200 980,170 1000,200" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.2"/>
+  <rect x="940" y="350" width="40" height="40" rx="8" fill="none" stroke="#a78bfa" stroke-width="0.8" opacity="0.15" transform="rotate(45 960 370)"/>
+</svg>

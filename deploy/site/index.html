@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>BlogPost — AI-платформа для блогеров, бизнеса и создателей контента</title>
+    <meta name="description" content="BlogPost — единая платформа с AI-генерацией контента, публикацией в соцсети, аналитикой и монетизацией. Создавайте посты, видео и музыку с помощью нейросетей. Первые 48 часов бесплатно." />
+    <meta name="keywords" content="AI контент, генерация контента, блогер платформа, автоматическая публикация, соцсети, аналитика, монетизация, YandexGPT, GigaChat, Kandinsky, SMM инструмент" />
+    <meta name="author" content="ИП Герасимов Александр Владимирович" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="ru" />
+    <meta name="geo.region" content="RU" />
+    <meta name="geo.placename" content="Россия" />
+    <link rel="canonical" href="https://blogpost.ru/" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blogpost.ru/" />
+    <meta property="og:title" content="BlogPost — AI-платформа для блогеров и создателей контента" />
+    <meta property="og:description" content="Создавайте контент с AI, публикуйте в 6+ соцсетей, анализируйте и монетизируйте — всё в одной платформе. Первые 48 часов бесплатно." />
+    <meta property="og:image" content="https://blogpost.ru/og-image.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="BlogPost" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BlogPost — AI-платформа для блогеров" />
+    <meta name="twitter:description" content="Создавайте контент с AI, публикуйте в соцсети, анализируйте и монетизируйте. Первые 48 часов бесплатно." />
+    <meta name="twitter:image" content="https://blogpost.ru/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#6366f1" />
+    <meta name="msapplication-TileColor" content="#6366f1" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "BlogPost",
+      "url": "https://blogpost.ru",
+      "description": "AI-платформа для блогеров, бизнеса и создателей контента. Генерация текстов, видео, музыки с помощью нейросетей. Публикация в соцсети, аналитика, монетизация.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Бесплатный",
+          "price": "0",
+          "priceCurrency": "RUB",
+          "description": "48 часов полного доступа"
+        },
+        {
+          "@type": "Offer",
+          "name": "Базовый",
+          "price": "990",
+          "priceCurrency": "RUB",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" }
+        },
+        {
+          "@type": "Offer",
+          "name": "Профессиональный",
+          "price": "4990",
+          "priceCurrency": "RUB",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" }
+        },
+        {
+          "@type": "Offer",
+          "name": "Премиум",
+          "price": "9990",
+          "priceCurrency": "RUB",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "billingDuration": "P1M" }
+        }
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "BlogPost",
+        "url": "https://blogpost.ru"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1247"
+      }
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BlogPost",
+      "url": "https://blogpost.ru",
+      "email": "support@blogpost.ru",
+      "founder": {
+        "@type": "Person",
+        "name": "Герасимов Александр Владимирович"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RU"
+      },
+      "sameAs": []
+    }
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      html, body { margin: 0; padding: 0; width: 100%; height: 100%; }
+      html.light, html.light body { background-color: #ffffff !important; color: #000000; }
+      html.dark, html.dark body { background-color: #1a1a1a !important; color: #ffffff; }
+    </style>
+    <script>
+      (function () {
+        var isInIframe = window.self !== window.top;
+        function applyThemeToDOM(theme) {
+          document.documentElement.classList.remove("light", "dark");
+          document.documentElement.classList.add(theme);
+          document.documentElement.setAttribute("data-theme", theme);
+        }
+        if (isInIframe) {
+          window.addEventListener("message", function (event) {
+            if (event.data && typeof event.data.theme === "string") {
+              var theme = event.data.theme;
+              if (theme === "light" || theme === "dark") applyThemeToDOM(theme);
+            }
+          });
+        } else {
+          applyThemeToDOM("light");
+        }
+      })();
+    </script>
+    <script>
+      (function () {
+        if (window.self === window.top) return;
+        var reported = {};
+        window.addEventListener("error", function (event) {
+          if (!event || !event.message) return;
+          var key = event.message + "|" + (event.filename || "") + "|" + (event.lineno || 0);
+          if (reported[key]) return;
+          reported[key] = true;
+          try {
+            window.parent.postMessage({
+              type: "sandbox-runtime-error",
+              payload: {
+                message: String(event.message).slice(0, 500),
+                filename: event.filename || "",
+                lineno: event.lineno || 0,
+                colno: event.colno || 0,
+                stack: event.error && event.error.stack ? String(event.error.stack).slice(0, 2000) : ""
+              }
+            }, "*");
+          } catch (e) {}
+        });
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-Bq9SE398.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dbup2ZLK.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

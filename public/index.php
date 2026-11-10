@@ -9,12 +9,16 @@
  *   anything else   static files (the built blogpost SPA lives in ../site or ./)
  */
 
-require_once __DIR__ . '/../src/Db.php';
-require_once __DIR__ . '/../src/Jwt.php';
-require_once __DIR__ . '/../src/Auth.php';
-require_once __DIR__ . '/../src/Rest.php';
-require_once __DIR__ . '/../src/Functions.php';
-require_once __DIR__ . '/../src/ApiProxy.php';
+// Works both as public/index.php (local dev) and flat index.php (shared hosting deploy):
+// src/ and schema.sql sit next to index.php in the flat layout, one level up in the dev layout.
+$SLITE_ROOT = is_dir(__DIR__ . '/src') ? __DIR__ : dirname(__DIR__);
+
+require_once $SLITE_ROOT . '/src/Db.php';
+require_once $SLITE_ROOT . '/src/Jwt.php';
+require_once $SLITE_ROOT . '/src/Auth.php';
+require_once $SLITE_ROOT . '/src/Rest.php';
+require_once $SLITE_ROOT . '/src/Functions.php';
+require_once $SLITE_ROOT . '/src/ApiProxy.php';
 
 // ── CORS (frontend may be on another origin during dev) ──
 header('Access-Control-Allow-Origin: *');

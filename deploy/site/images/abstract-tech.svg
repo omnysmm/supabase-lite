@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="atg1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0a0a1a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="atglow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="atline" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="400" cy="400" rx="300" ry="300" fill="url(#atg1)"/>
+  <!-- Concentric rings -->
+  <circle cx="400" cy="400" r="100" fill="none" stroke="#6366f1" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="400" cy="400" r="180" fill="none" stroke="#8b5cf6" stroke-width="0.4" opacity="0.1"/>
+  <circle cx="400" cy="400" r="260" fill="none" stroke="#06b6d4" stroke-width="0.3" opacity="0.08"/>
+  <circle cx="400" cy="400" r="340" fill="none" stroke="#6366f1" stroke-width="0.3" opacity="0.05"/>
+  <!-- Core -->
+  <circle cx="400" cy="400" r="30" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="400" cy="400" r="8" fill="#6366f1" opacity="0.6" filter="url(#atglow)"/>
+  <!-- Orbiting elements -->
+  <g opacity="0.5" filter="url(#atglow)">
+    <circle cx="400" cy="250" r="5" fill="#6366f1"/>
+    <circle cx="550" cy="400" r="4" fill="#8b5cf6"/>
+    <circle cx="400" cy="550" r="5" fill="#06b6d4"/>
+    <circle cx="250" cy="400" r="4" fill="#a78bfa"/>
+    <circle cx="520" cy="280" r="3" fill="#818cf8"/>
+    <circle cx="520" cy="520" r="3" fill="#22d3ee"/>
+    <circle cx="280" cy="520" r="3" fill="#c4b5fd"/>
+    <circle cx="280" cy="280" r="3" fill="#6366f1"/>
+  </g>
+  <!-- Connection lines -->
+  <g opacity="0.15">
+    <line x1="400" y1="250" x2="400" y2="400" stroke="url(#atline)" stroke-width="0.8"/>
+    <line x1="550" y1="400" x2="400" y2="400" stroke="url(#atline)" stroke-width="0.8"/>
+    <line x1="400" y1="550" x2="400" y2="400" stroke="url(#atline)" stroke-width="0.8"/>
+    <line x1="250" y1="400" x2="400" y2="400" stroke="url(#atline)" stroke-width="0.8"/>
+    <line x1="520" y1="280" x2="400" y2="400" stroke="url(#atline)" stroke-width="0.5"/>
+    <line x1="520" y1="520" x2="400" y2="400" stroke="url(#atline)" stroke-width="0.5"/>
+    <line x1="280" y1="520" x2="400" y2="400" stroke="url(#atline)" stroke-width="0.5"/>
+    <line x1="280" y1="280" x2="400" y2="400" stroke="url(#atline)" stroke-width="0.5"/>
+  </g>
+  <!-- Cross connections -->
+  <g opacity="0.08">
+    <line x1="400" y1="250" x2="550" y2="400" stroke="#8b5cf6" stroke-width="0.5"/>
+    <line x1="550" y1="400" x2="400" y2="550" stroke="#06b6d4" stroke-width="0.5"/>
+    <line x1="400" y1="550" x2="250" y2="400" stroke="#a78bfa" stroke-width="0.5"/>
+    <line x1="250" y1="400" x2="400" y2="250" stroke="#6366f1" stroke-width="0.5"/>
+  </g>
+</svg>
